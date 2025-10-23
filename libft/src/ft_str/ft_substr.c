@@ -12,6 +12,25 @@
 
 #include "libft.h"
 
+/*
+** Extracts a substring from a string.
+** 
+** Parameters:
+**   s     - The source string (null-terminated)
+**   start - Starting index of substring
+**   len   - Maximum length of substring
+** 
+** Return:
+**   Returns a pointer to the newly allocated substring,
+**   or NULL if allocation fails or s is NULL.
+** 
+** Edge cases:
+**   - Returns NULL if s is NULL
+**   - Returns empty string if start >= string length
+**   - Adjusts len if it exceeds remaining string length
+**   - Caller must free the returned string
+**   - Returns NULL if malloc fails
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;

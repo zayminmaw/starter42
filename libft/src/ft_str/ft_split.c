@@ -55,6 +55,26 @@ static char	*make_word(char const *s, char c)
 	return (word);
 }
 
+/*
+** Splits a string into an array of strings using a delimiter.
+** 
+** Parameters:
+**   s - The string to split (null-terminated)
+**   c - The delimiter character
+** 
+** Return:
+**   Returns a null-terminated array of strings,
+**   or NULL if allocation fails or s is NULL.
+** 
+** Edge cases:
+**   - Returns NULL if s is NULL
+**   - Returns NULL if allocation fails
+**   - Consecutive delimiters are treated as one
+**   - Array is null-terminated
+**   - Caller must free the array and all strings (use ft_strarr_free)
+**   - Helper function count_word counts number of words
+**   - Helper function make_word creates individual words
+*/
 char	**ft_split(char const *s, char c)
 {
 	int			i;

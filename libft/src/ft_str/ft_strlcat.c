@@ -12,6 +12,25 @@
 
 #include "libft.h"
 
+/*
+** Appends src to dst with size-bounded buffer, ensuring null-termination.
+** 
+** Parameters:
+**   dst  - Destination string buffer
+**   src  - Source string to append (null-terminated)
+**   size - Total size of destination buffer
+** 
+** Return:
+**   Returns the total length of the string it tried to create
+**   (initial dst length + src length).
+** 
+** Edge cases:
+**   - Always null-terminates dst (if size > 0)
+**   - Returns dst_len + src_len for length calculation
+**   - If size <= dst_len, returns size + src_len
+**   - If dst_len >= size, no concatenation occurs
+**   - Safer alternative to strcat
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dst_len;

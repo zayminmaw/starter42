@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+/*
+** Duplicates a string by allocating memory and copying content.
+** 
+** Parameters:
+**   s - The string to duplicate (null-terminated)
+** 
+** Return:
+**   Returns a pointer to the newly allocated duplicate string,
+**   or NULL if allocation fails.
+** 
+** Edge cases:
+**   - Returns NULL if malloc fails
+**   - Caller must free the returned string
+**   - Allocates exactly strlen(s) + 1 bytes
+**   - Undefined behavior if s is NULL (no null check)
+*/
 char	*ft_strdup(const char *s)
 {
 	char	*dest;

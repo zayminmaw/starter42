@@ -10,6 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Converts a string to an integer.
+** 
+** Parameters:
+**   nptr - The string to convert (null-terminated)
+** 
+** Return:
+**   Returns the converted integer value.
+** 
+** Edge cases:
+**   - Skips leading whitespace characters (9-13 and 32)
+**   - Handles optional '+' sign (but not if followed by '-')
+**   - Handles '-' sign for negative numbers
+**   - Stops conversion at first non-digit character
+**   - Does not check for overflow (undefined behavior for values > INT_MAX)
+*/
 int	ft_atoi(const char *nptr)
 {
 	int	i;

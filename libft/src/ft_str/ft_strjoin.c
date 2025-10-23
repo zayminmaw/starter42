@@ -12,6 +12,23 @@
 
 #include "libft.h"
 
+/*
+** Concatenates two strings with size-bounded buffer.
+** 
+** Parameters:
+**   s1 - First string to join (null-terminated)
+**   s2 - Second string to join (null-terminated)
+** 
+** Return:
+**   Returns a pointer to a newly allocated concatenated string,
+**   or NULL if allocation fails.
+** 
+** Edge cases:
+**   - Returns NULL if allocation fails
+**   - Caller must free the returned string
+**   - Undefined behavior if s1 or s2 is NULL (no null check)
+**   - Allocates strlen(s1) + strlen(s2) + 1 bytes
+*/
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dest;

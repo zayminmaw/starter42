@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/*
+** Converts an uppercase letter to lowercase.
+** 
+** Parameters:
+**   c - The character to convert (as int to handle EOF)
+** 
+** Return:
+**   Returns the lowercase equivalent if c is uppercase (A-Z),
+**   otherwise returns c unchanged.
+** 
+** Edge cases:
+**   - Only converts ASCII uppercase letters (65-90)
+**   - Returns character unchanged if not uppercase
+**   - Does not affect digits or special characters
+*/
 int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
