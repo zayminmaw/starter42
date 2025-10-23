@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/*
+** Outputs a signed integer for ft_printf.
+** 
+** Parameters:
+**   nbr - The integer to output
+** 
+** Return:
+**   Returns the number of characters printed.
+** 
+** Edge cases:
+**   - Uses ft_itoa to convert int to string
+**   - Handles negative numbers
+**   - Handles INT_MIN correctly
+**   - Frees allocated string after printing
+*/
 int	pf_putnbr(int nbr)
 {
 	char	*s_nbr;

@@ -12,6 +12,24 @@
 
 #include "libft.h"
 
+/*
+** Trims characters from the beginning and end of a string.
+** 
+** Parameters:
+**   s1  - The string to trim (null-terminated)
+**   set - Set of characters to remove from both ends
+** 
+** Return:
+**   Returns a pointer to a newly allocated trimmed string,
+**   or NULL if allocation fails.
+** 
+** Edge cases:
+**   - Returns empty string if s1 is empty
+**   - Caller must free the returned string
+**   - Uses ft_strchr to check if character is in set
+**   - Uses ft_substr to create the trimmed substring
+**   - Trims from both beginning and end
+*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int	i;

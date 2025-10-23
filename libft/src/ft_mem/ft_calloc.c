@@ -12,6 +12,23 @@
 
 #include "libft.h"
 
+/*
+** Allocates and zeros memory for an array.
+** 
+** Parameters:
+**   nmemb - Number of elements to allocate
+**   size  - Size of each element in bytes
+** 
+** Return:
+**   Returns a pointer to the allocated and zeroed memory,
+**   or NULL if allocation fails or overflow would occur.
+** 
+** Edge cases:
+**   - Returns malloc(0) if either nmemb or size is 0
+**   - Returns NULL if multiplication would overflow INT_MAX
+**   - Returns NULL if allocation fails
+**   - Memory is initialized to zero (unlike malloc)
+*/
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*tmp;

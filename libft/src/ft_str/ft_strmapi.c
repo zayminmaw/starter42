@@ -12,6 +12,23 @@
 
 #include "libft.h"
 
+/*
+** Creates a new string by applying a function to each character.
+** 
+** Parameters:
+**   s - The string to transform (null-terminated)
+**   f - Function to apply (takes index and character, returns new character)
+** 
+** Return:
+**   Returns a pointer to the newly allocated transformed string,
+**   or NULL if allocation fails.
+** 
+** Edge cases:
+**   - Returns NULL if malloc fails
+**   - Caller must free the returned string
+**   - Undefined behavior if s or f is NULL (no null check)
+**   - f is called with index and value of each character
+*/
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;

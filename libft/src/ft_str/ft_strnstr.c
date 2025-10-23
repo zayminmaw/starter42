@@ -12,6 +12,24 @@
 
 #include "libft.h"
 
+/*
+** Locates a substring in a string within a specified length.
+** 
+** Parameters:
+**   big    - The string to search (null-terminated)
+**   little - The substring to find (null-terminated)
+**   len    - Maximum number of characters to search
+** 
+** Return:
+**   Returns a pointer to the first occurrence of little in big,
+**   or NULL if not found within len characters.
+** 
+** Edge cases:
+**   - Returns big if little is empty string
+**   - Returns NULL if little is not found within len characters
+**   - Only searches within the first len bytes of big
+**   - Stops search at null terminator even if len is larger
+*/
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;

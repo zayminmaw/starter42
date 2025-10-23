@@ -12,6 +12,24 @@
 
 #include "libft.h"
 
+/*
+** Allocates memory and tracks it for garbage collection.
+** 
+** Parameters:
+**   size - Number of bytes to allocate
+** 
+** Return:
+**   Returns a pointer to the allocated memory,
+**   or NULL if allocation fails.
+** 
+** Edge cases:
+**   - Returns NULL if malloc fails
+**   - Adds allocation to tracked list for later cleanup
+**   - Uses ft_malloc_lst to get the tracking list
+**   - Uses ft_lstnew to create tracking node
+**   - Uses ft_lstadd_back to add to tracking list
+**   - Memory can be freed all at once with ft_malloc_clear
+*/
 void	*ft_malloc(size_t size)
 {
 	t_list	**malloc_lst;

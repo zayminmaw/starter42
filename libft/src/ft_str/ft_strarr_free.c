@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+/*
+** Frees a null-terminated array of strings.
+** 
+** Parameters:
+**   str_arr - Array of strings to free (null-terminated array)
+** 
+** Return:
+**   None (void function)
+** 
+** Edge cases:
+**   - Does nothing if str_arr is NULL
+**   - Frees each string in the array individually
+**   - Frees the array itself after freeing all strings
+**   - Assumes array is null-terminated
+**   - Useful for cleaning up results from ft_split
+*/
 void	ft_strarr_free(char **str_arr)
 {
 	int	i;

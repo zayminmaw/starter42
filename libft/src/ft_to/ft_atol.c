@@ -10,6 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Converts a string to a long integer.
+** 
+** Parameters:
+**   nptr - The string to convert (null-terminated)
+** 
+** Return:
+**   Returns the converted long integer value.
+** 
+** Edge cases:
+**   - Skips leading whitespace characters (9-13 and 32)
+**   - Handles optional '+' sign (but not if followed by '-')
+**   - Handles '-' sign for negative numbers
+**   - Stops conversion at first non-digit character
+**   - Returns long type for larger range than ft_atoi
+*/
 long	ft_atol(const char *nptr)
 {
 	int		i;

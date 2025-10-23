@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/*
+** Outputs an unsigned integer for ft_printf.
+** 
+** Parameters:
+**   n - The unsigned integer to output
+** 
+** Return:
+**   Returns the number of characters printed.
+** 
+** Edge cases:
+**   - Uses recursion to print digits from left to right
+**   - Handles 0 correctly
+**   - Works with maximum unsigned int value
+**   - Returns count of digits printed
+*/
 int	pf_putunbr(unsigned int n)
 {
 	int	count;

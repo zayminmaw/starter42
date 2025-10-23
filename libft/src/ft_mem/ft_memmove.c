@@ -12,6 +12,23 @@
 
 #include "libft.h"
 
+/*
+** Copies n bytes from src to dest, handling overlapping regions safely.
+** 
+** Parameters:
+**   dest - Pointer to the destination memory block
+**   src  - Pointer to the source memory block
+**   n    - Number of bytes to copy
+** 
+** Return:
+**   Returns the original dest pointer, or NULL if both are NULL.
+** 
+** Edge cases:
+**   - Returns NULL if both dest and src are NULL
+**   - Safely handles overlapping memory regions by copying backwards if needed
+**   - If src < dest, copies from end to beginning to avoid corruption
+**   - If dest <= src, copies from beginning to end
+*/
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest_tmp;

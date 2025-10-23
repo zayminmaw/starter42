@@ -12,6 +12,25 @@
 
 #include "libft.h"
 
+/*
+** Compares up to n characters of two strings.
+** 
+** Parameters:
+**   s1 - First string to compare (null-terminated)
+**   s2 - Second string to compare (null-terminated)
+**   n  - Maximum number of characters to compare
+** 
+** Return:
+**   Returns 0 if strings are equal,
+**   negative value if s1 < s2,
+**   positive value if s1 > s2.
+** 
+** Edge cases:
+**   - Returns 0 if n is 0
+**   - Comparison stops at null terminator or after n characters
+**   - Uses unsigned char for comparison
+**   - Returns difference of first non-matching characters
+*/
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

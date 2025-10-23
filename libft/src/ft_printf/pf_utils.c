@@ -12,12 +12,39 @@
 
 #include "libft.h"
 
+/*
+** Outputs a single character for ft_printf.
+** 
+** Parameters:
+**   c - The character to output
+** 
+** Return:
+**   Returns 1 (number of characters written).
+** 
+** Edge cases:
+**   - Writes to stdout (fd 1)
+**   - Always returns 1
+*/
 int	pf_putchar(int c)
 {
 	ft_putchar_fd(c, 1);
 	return (1);
 }
 
+/*
+** Outputs a string for ft_printf.
+** 
+** Parameters:
+**   str - The string to output (null-terminated)
+** 
+** Return:
+**   Returns the number of characters written.
+** 
+** Edge cases:
+**   - Outputs "(null)" if str is NULL
+**   - Returns 6 for NULL string
+**   - Returns string length otherwise
+*/
 int	pf_putstr(char *str)
 {
 	if (str == NULL)

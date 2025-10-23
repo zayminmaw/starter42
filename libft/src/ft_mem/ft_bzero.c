@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/*
+** Sets a block of memory to zero.
+** 
+** Parameters:
+**   s - Pointer to the memory area to zero out
+**   n - Number of bytes to set to zero
+** 
+** Return:
+**   None (void function)
+** 
+** Edge cases:
+**   - If n is 0, no bytes are modified
+**   - Undefined behavior if s is NULL (standard bzero behavior)
+**   - Commonly used to clear sensitive data or initialize structures
+*/
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*tmp_pt;

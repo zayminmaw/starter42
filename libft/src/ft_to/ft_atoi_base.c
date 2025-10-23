@@ -15,6 +15,25 @@
 static int	is_valid(int c, int baselen);
 static void	get_char_value(char val, int *res);
 
+/*
+** Converts a string to an integer in the specified base.
+** 
+** Parameters:
+**   str      - The string to convert (null-terminated)
+**   str_base - The base for conversion (2-16)
+** 
+** Return:
+**   Returns the converted integer value in the specified base.
+** 
+** Edge cases:
+**   - Skips leading whitespace using ft_isspace
+**   - Handles optional '+' sign (but not if followed by '-')
+**   - Handles '-' sign for negative numbers
+**   - Supports bases 2-16 (hexadecimal includes both 'a-f' and 'A-F')
+**   - Stops conversion at first invalid character for the given base
+**   - Helper function is_valid checks if character is valid for base
+**   - Helper function get_char_value converts character to numeric value
+*/
 int	ft_atoi_base(const char *str, int str_base)
 {
 	int	res;
