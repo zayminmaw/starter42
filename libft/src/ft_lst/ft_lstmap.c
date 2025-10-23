@@ -29,7 +29,7 @@
 **   - Returns NULL if allocation fails (clears partial list with del)
 **   - Uses ft_lstnew to create new nodes
 **   - Uses ft_lstadd_back to build new list
-**   - Clears original list at the end (caution: may not be desired behavior)
+**   - Note: Line 54 attempts to clear original list but has no effect (lst is local)
 **   - On allocation failure, cleans up new list before returning NULL
 */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
