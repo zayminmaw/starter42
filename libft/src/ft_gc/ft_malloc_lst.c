@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/*
+** Returns a static pointer to the malloc tracking list.
+** 
+** Parameters:
+**   None
+** 
+** Return:
+**   Returns a pointer to the static malloc tracking list.
+** 
+** Edge cases:
+**   - Uses static variable to persist across calls
+**   - Initializes to NULL on first call
+**   - Returns pointer to pointer (t_list **) for list manipulation
+**   - Used internally by ft_malloc and ft_malloc_clear
+*/
 t_list	**ft_malloc_lst(void)
 {
 	static t_list	*malloc_lst;

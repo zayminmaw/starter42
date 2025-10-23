@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+/*
+** Outputs an unsigned integer in hexadecimal for ft_printf.
+** 
+** Parameters:
+**   n    - The unsigned integer to output in hex
+**   type - 'x' for lowercase hex, 'X' for uppercase hex
+** 
+** Return:
+**   Returns the number of characters printed.
+** 
+** Edge cases:
+**   - Uses recursion to print hex digits from left to right
+**   - Supports both lowercase (x) and uppercase (X) output
+**   - Converts 0-9 to '0'-'9', 10-15 to 'a'-'f' or 'A'-'F'
+**   - Handles 0 correctly
+*/
 int	pf_puthex(unsigned int n, const char type)
 {
 	int	count;

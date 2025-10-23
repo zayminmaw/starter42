@@ -12,6 +12,26 @@
 
 #include "libft.h"
 
+/*
+** Creates a new list by applying a function to each node's content.
+** 
+** Parameters:
+**   lst - The first node of the source list
+**   f   - Function to apply to each node's content (returns new content)
+**   del - Function to delete content if allocation fails
+** 
+** Return:
+**   Returns a pointer to the first node of the new list,
+**   or NULL if allocation fails or parameters are invalid.
+** 
+** Edge cases:
+**   - Returns NULL if lst, f, or del is NULL
+**   - Returns NULL if allocation fails (clears partial list with del)
+**   - Uses ft_lstnew to create new nodes
+**   - Uses ft_lstadd_back to build new list
+**   - Clears original list at the end (caution: may not be desired behavior)
+**   - On allocation failure, cleans up new list before returning NULL
+*/
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;

@@ -12,6 +12,23 @@
 
 #include "libft.h"
 
+/*
+** Creates a new node for a linked list.
+** 
+** Parameters:
+**   content - Pointer to the content to store in the node
+** 
+** Return:
+**   Returns a pointer to the newly created node,
+**   or NULL if allocation fails.
+** 
+** Edge cases:
+**   - Returns NULL if malloc fails
+**   - Sets next pointer to NULL
+**   - Does not copy content, just stores the pointer
+**   - content can be NULL
+**   - Caller must free the node when done
+*/
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;

@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+/*
+** Adds a new node to the front of a linked list.
+** 
+** Parameters:
+**   lst - Pointer to the first node of the list
+**   new - The new node to add
+** 
+** Return:
+**   None (void function)
+** 
+** Edge cases:
+**   - new becomes the new first node
+**   - new->next is set to the old first node
+**   - Works correctly even if list is empty
+**   - Undefined behavior if new is NULL (no null check)
+*/
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;

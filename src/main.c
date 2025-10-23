@@ -12,6 +12,20 @@
 
 #include "starter.h"
 
+/*
+** Main entry point of the program.
+** 
+** Parameters:
+**   None (void)
+** 
+** Return:
+**   Returns 0 on successful execution.
+** 
+** Edge cases:
+**   - Prints "Hello, world!" to stdout
+**   - Uses ft_printf for formatted output
+**   - Simple test/starter program
+*/
 int	main(void)
 {
 	ft_printf("Hello, world!");

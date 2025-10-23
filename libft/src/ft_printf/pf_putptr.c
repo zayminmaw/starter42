@@ -14,6 +14,21 @@
 
 int	pf_puthex_long(unsigned long n);
 
+/*
+** Outputs a pointer address in hexadecimal for ft_printf.
+** 
+** Parameters:
+**   n - The pointer to output
+** 
+** Return:
+**   Returns the number of characters printed.
+** 
+** Edge cases:
+**   - Outputs "(nil)" for NULL pointers
+**   - Outputs "0x" prefix followed by hex address
+**   - Uses lowercase hex digits
+**   - Helper function pf_puthex_long handles unsigned long hex conversion
+*/
 int	pf_putptr(void *n)
 {
 	int				count;
@@ -31,6 +46,20 @@ int	pf_putptr(void *n)
 	return (count);
 }
 
+/*
+** Helper function to output unsigned long in hexadecimal.
+** 
+** Parameters:
+**   n - The unsigned long to output in hex
+** 
+** Return:
+**   Returns the number of characters printed.
+** 
+** Edge cases:
+**   - Similar to pf_puthex but for unsigned long type
+**   - Uses recursion to print hex digits
+**   - Always uses lowercase hex digits
+*/
 int	pf_puthex_long(unsigned long n)
 {
 	int					count;

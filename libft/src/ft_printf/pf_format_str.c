@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+/*
+** Processes format specifiers for ft_printf.
+** 
+** Parameters:
+**   args - va_list containing variable arguments
+**   type - The format specifier character
+** 
+** Return:
+**   Returns the number of characters printed for this specifier.
+** 
+** Edge cases:
+**   - Handles: c, s, d, i, u, %, x, X, p
+**   - Extracts appropriate argument type based on specifier
+**   - Returns character count from helper functions
+**   - Routes to appropriate print function based on type
+*/
 int	pf_format_str(va_list args, const char type)
 {
 	int	p_count;

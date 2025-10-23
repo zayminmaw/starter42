@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+/*
+** Iterates through a linked list and applies a function to each node's content.
+** 
+** Parameters:
+**   lst - The first node of the list
+**   f   - Function to apply to each node's content
+** 
+** Return:
+**   None (void function)
+** 
+** Edge cases:
+**   - Safe to call on empty list (does nothing)
+**   - f is called on each node's content in order
+**   - Does not modify the list structure
+**   - Undefined behavior if f is NULL (no null check)
+*/
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*tmp;
