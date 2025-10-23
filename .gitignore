@@ -1,0 +1,16 @@
+# Build artifacts
+*.o
+*.a
+obj/
+libft/obj/
+libft/libft.a
+starter
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store

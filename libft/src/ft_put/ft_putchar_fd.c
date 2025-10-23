@@ -12,6 +12,20 @@
 
 #include "libft.h"
 
+/*
+** Outputs a character to the specified file descriptor.
+** 
+** Parameters:
+**   c  - The character to output
+**   fd - The file descriptor to write to
+** 
+** Return:
+**   None (void function)
+** 
+** Edge cases:
+**   - If fd is invalid, write will fail but function doesn't report error
+**   - Common fd values: 0 (stdin), 1 (stdout), 2 (stderr)
+*/
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);

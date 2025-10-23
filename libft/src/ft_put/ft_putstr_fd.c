@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/*
+** Outputs a string to the specified file descriptor.
+** 
+** Parameters:
+**   s  - The string to output (null-terminated)
+**   fd - The file descriptor to write to
+** 
+** Return:
+**   None (void function)
+** 
+** Edge cases:
+**   - Undefined behavior if s is NULL (no null check)
+**   - Does not output a newline (unlike ft_putendl_fd)
+**   - If fd is invalid, write will fail but function doesn't report error
+*/
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;

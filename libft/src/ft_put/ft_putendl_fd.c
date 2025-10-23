@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/*
+** Outputs a string followed by a newline to the specified file descriptor.
+** 
+** Parameters:
+**   s  - The string to output (null-terminated)
+**   fd - The file descriptor to write to
+** 
+** Return:
+**   None (void function)
+** 
+** Edge cases:
+**   - Undefined behavior if s is NULL (no null check)
+**   - Always outputs a newline after the string
+**   - If fd is invalid, write will fail but function doesn't report error
+*/
 void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;

@@ -12,6 +12,23 @@
 
 #include "libft.h"
 
+/*
+** Copies n bytes from src to dest.
+** 
+** Parameters:
+**   dest - Pointer to the destination memory block
+**   src  - Pointer to the source memory block
+**   n    - Number of bytes to copy
+** 
+** Return:
+**   Returns the original dest pointer.
+** 
+** Edge cases:
+**   - Returns dest if both dest and src are NULL
+**   - Undefined behavior if memory regions overlap (use ft_memmove instead)
+**   - Can copy blocks containing null bytes
+**   - If n is 0, nothing is copied
+*/
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*dest_tmp;
