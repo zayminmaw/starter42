@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_malloc_clear.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
+/*   By: zmin <zmin@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 21:35:44 by zmin              #+#    #+#             */
-/*   Updated: 2025/10/23 18:37:50 by zayminmaw        ###   ########.fr       */
+/*   Created: 2025/09/30 23:36:56 by zmin              #+#    #+#             */
+/*   Updated: 2025/10/02 20:14:43 by zmin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "starter.h"
+#include "libft.h"
 
-int	main(void)
+void	ft_malloc_clear(void)
 {
-	ft_printf("Hello, world!");
-	return (0);
+	t_list	**malloc_lst;
+
+	malloc_lst = ft_malloc_lst();
+	ft_lstclear(malloc_lst, &free);
 }

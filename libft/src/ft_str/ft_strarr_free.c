@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strarr_free.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zmin <zmin@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 21:51:26 by zmin              #+#    #+#             */
-/*   Updated: 2025/09/10 22:24:36 by zmin             ###   ########.fr       */
+/*   Created: 2025/09/14 20:05:55 by zmin              #+#    #+#             */
+/*   Updated: 2025/09/14 20:12:14 by zmin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "libft.h"
 
-# include "../libft/includes/libft.h"
+void	ft_strarr_free(char **str_arr)
+{
+	int	i;
 
-#endif
+	i = 0;
+	if (!str_arr)
+		return ;
+	while (str_arr[i])
+	{
+		free(str_arr[i]);
+		i++;
+	}
+	free(str_arr);
+}

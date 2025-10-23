@@ -1,19 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
+/*   By: zmin <zmin@student.42bangkok.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 21:35:44 by zmin              #+#    #+#             */
-/*   Updated: 2025/10/23 18:37:50 by zayminmaw        ###   ########.fr       */
+/*   Created: 2025/10/02 20:04:51 by zmin              #+#    #+#             */
+/*   Updated: 2025/10/08 20:06:12 by zmin             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "starter.h"
+#include "libft.h"
 
-int	main(void)
+int	ft_isspace(int c)
 {
-	ft_printf("Hello, world!");
+	if (c == 9 || c == 10 || c == 11 || c == 12 || c == 13 || c == 32)
+		return (1);
 	return (0);
 }

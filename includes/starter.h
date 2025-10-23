@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   starter.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zayminmaw <zayminmaw@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/10 21:35:44 by zmin              #+#    #+#             */
-/*   Updated: 2025/10/23 18:37:50 by zayminmaw        ###   ########.fr       */
+/*   Created: 2025/09/10 21:51:26 by zmin              #+#    #+#             */
+/*   Updated: 2025/10/23 18:37:40 by zayminmaw        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "starter.h"
+#ifndef STARTER_H
+# define STARTER_H
 
-int	main(void)
-{
-	ft_printf("Hello, world!");
-	return (0);
-}
+# include "../libft/includes/libft.h"
+
+#endif
